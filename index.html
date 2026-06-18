@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Tutorials | Traders Edge Network</title>
+  <meta name="description" content="Step-by-step video guides to help you navigate the Traders Edge Network member portal." />
+  <link rel="icon" href="assets/team-hub-logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://www.tradersedgenetwork.com" class="logo-link" target="_blank" rel="noopener noreferrer">
+        <span class="logo-wordmark"><span class="logo-traders">Traders</span><span class="logo-edge">Edge</span></span>
+        <span class="logo-sub">Network</span>
+      </a>
+      <nav class="header-nav">
+        <a href="https://hub.tradersedgenetwork.com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Go to Portal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <img src="assets/team-hub-logo.png" alt="" class="hero-emblem" aria-hidden="true" />
+        <p class="eyebrow">Member Portal Guides</p>
+        <h1>Learn How to Use the Portal</h1>
+        <p class="hero-lead">
+          Welcome! These short walkthrough videos will help you get comfortable with the Traders Edge Network hub — from your foundation setup and membership to paper trading and placing your first trade.
+        </p>
+        <a href="#tutorials" class="btn btn-primary">Start Watching</a>
+      </div>
+    </section>
+
+    <section id="tutorials" class="tutorials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tutorial Videos</h2>
+          <p>Watch in order for the best experience, or jump to the topic you need.</p>
+        </div>
+
+        <div class="tutorial-grid">
+          <article class="tutorial-card" id="foundation">
+            <div class="card-badge">Step 1</div>
+            <div class="card-header">
+              <h3>The Foundation &amp; Membership</h3>
+              <p>Get oriented with the portal, understand your membership, and learn the core areas you'll use every day.</p>
+            </div>
+            <div class="video-wrapper">
+              <video controls preload="metadata" playsinline poster="">
+                <source src="videos/foundation-and-membership.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <ul class="topic-list">
+              <li>Navigating the member hub</li>
+              <li>Understanding your membership</li>
+              <li>Key foundation resources</li>
+            </ul>
+          </article>
+
+          <article class="tutorial-card" id="papermoney">
+            <div class="card-badge">Step 2</div>
+            <div class="card-header">
+              <h3>PaperMoney &amp; Placing a Trade</h3>
+              <p>Practice with PaperMoney and walk through how to place a trade step by step — no real money at risk.</p>
+            </div>
+            <div class="video-wrapper">
+              <video controls preload="metadata" playsinline poster="">
+                <source src="videos/papermoney-and-placing-trade.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <ul class="topic-list">
+              <li>Setting up PaperMoney</li>
+              <li>Placing a practice trade</li>
+              <li>Tips before going live</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Ready to log in?</h2>
+          <p>Head to the member portal and put what you've learned into practice.</p>
+        </div>
+        <a href="https://hub.tradersedgenetwork.com" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Open Member Portal</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-wordmark">
+        <span class="logo-wordmark"><span class="logo-traders dark">Traders</span><span class="logo-edge">Edge</span></span>
+        <span class="logo-sub dark">Network</span>
+      </div>
+      <p>&copy; <span id="year"></span> Traders Edge Network. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.tradersedgenetwork.com" target="_blank" rel="noopener noreferrer">Main Website</a>
+        <a href="https://hub.tradersedgenetwork.com" target="_blank" rel="noopener noreferrer">Member Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
