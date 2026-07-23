@@ -166,6 +166,60 @@ a:hover {
   font-size: 1rem;
 }
 
+.btn-ghost {
+  background: transparent;
+  color: var(--charcoal);
+  border-color: var(--gray-200);
+}
+
+.btn-ghost:hover {
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* Featured free trial */
+.free-trial {
+  padding: 0 0 1rem;
+}
+
+.featured-card {
+  max-width: 860px;
+  margin: 0 auto;
+  border: 2px solid var(--green-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.featured-badge {
+  background: var(--green);
+  color: var(--white);
+}
+
+.featured-card .card-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.featured-card .card-header p {
+  color: var(--gray-600);
+  font-size: 1rem;
+}
+
+.trial-cta {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+
 /* Hero */
 .hero {
   position: relative;
