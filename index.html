@@ -84,11 +84,39 @@
               <h3>The Foundation &amp; Membership</h3>
               <p>Get oriented with the portal, understand your membership, and learn the core areas you'll use every day.</p>
             </div>
+            <aside class="walkthrough-sign" aria-label="Membership walkthrough tip">
+              <span class="walkthrough-sign-arrow" aria-hidden="true">↓</span>
+              <div class="walkthrough-sign-body">
+                <strong>Membership walkthrough is here</strong>
+                <span>Starts at <time datetime="PT1M56S">1:56</time> in this video</span>
+              </div>
+              <button type="button" class="btn btn-sign" data-jump-video="foundation-video" data-jump-to="116">
+                Jump to 1:56
+              </button>
+            </aside>
             <div class="video-wrapper">
-              <video class="tutorial-video" controls preload="metadata" playsinline poster="assets/posters/foundation-and-membership.jpg">
+              <video id="foundation-video" class="tutorial-video" controls preload="metadata" playsinline poster="assets/posters/foundation-and-membership.jpg">
                 <source src="videos/foundation-and-membership.mp4" type="video/mp4" />
+                <track
+                  kind="chapters"
+                  src="videos/foundation-and-membership-chapters.vtt"
+                  srclang="en"
+                  label="Chapters"
+                  default
+                />
                 Your browser does not support the video tag.
               </video>
+            </div>
+            <div class="chapter-bar" data-chapter-for="foundation-video" aria-hidden="true">
+              <div class="chapter-bar-track">
+                <div class="chapter-segment segment-foundation" style="flex: 116"></div>
+                <div class="chapter-segment segment-membership" style="flex: 156">
+                  <span class="chapter-marker" title="Membership walkthrough starts here">
+                    <span class="chapter-marker-dot"></span>
+                    <span class="chapter-marker-label">Membership walkthrough is here · 1:56</span>
+                  </span>
+                </div>
+              </div>
             </div>
             <ul class="topic-list">
               <li>Navigating the member hub</li>
