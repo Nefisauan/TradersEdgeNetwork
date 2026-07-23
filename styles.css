@@ -423,6 +423,10 @@ a:hover {
   box-shadow: 0 8px 20px rgba(26, 26, 26, 0.12);
 }
 
+.walkthrough-sign-below {
+  margin: 0 1.5rem 1.5rem;
+}
+
 .walkthrough-sign-arrow {
   display: inline-flex;
   align-items: center;
