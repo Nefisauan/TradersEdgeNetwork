@@ -24,6 +24,51 @@
     </div>
   </header>
 
+  <nav class="side-nav" aria-label="Page sections">
+    <p class="side-nav-title">Jump to</p>
+    <ol class="side-nav-list">
+      <li>
+        <a href="#membership-trial" class="side-nav-link" data-nav-section="membership-trial">Membership Trial</a>
+      </li>
+      <li>
+        <a
+          href="#foundation"
+          class="side-nav-link"
+          data-nav-section="foundation"
+          data-jump-video="foundation-video"
+          data-jump-to="0"
+        >Foundation Videos <span>(Book Buyers)</span></a>
+      </li>
+      <li>
+        <a
+          href="#membership-walkthrough"
+          class="side-nav-link"
+          data-nav-section="membership-walkthrough"
+          data-jump-video="foundation-video"
+          data-jump-to="116"
+        >Membership Walkthrough</a>
+      </li>
+      <li>
+        <a
+          href="#papermoney"
+          class="side-nav-link"
+          data-nav-section="papermoney"
+          data-jump-video="papermoney-video"
+          data-jump-to="0"
+        >PaperMoney</a>
+      </li>
+      <li>
+        <a
+          href="#placing-trade"
+          class="side-nav-link"
+          data-nav-section="placing-trade"
+          data-jump-video="papermoney-video"
+          data-jump-to="69"
+        >Placing a Trade</a>
+      </li>
+    </ol>
+  </nav>
+
   <main>
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
@@ -43,7 +88,7 @@
 
     <section id="free-trial" class="free-trial">
       <div class="container">
-        <aside class="book-access-sign" aria-label="Book owners foundation access">
+        <aside id="book-foundation" class="book-access-sign" aria-label="Book owners foundation access">
           <span class="walkthrough-sign-arrow book-arrow" aria-hidden="true">↓</span>
           <div class="walkthrough-sign-body">
             <strong>If you got the book, you have access to the Foundation here:</strong>
@@ -54,7 +99,7 @@
           </button>
         </aside>
 
-        <article class="tutorial-card featured-card">
+        <article id="membership-trial" class="tutorial-card featured-card">
           <div class="card-badge featured-badge">Membership Free Trial</div>
           <div class="card-header">
             <h2>24 Day Free Trial — Membership Access</h2>
@@ -113,7 +158,7 @@
               <h3>The Foundation &amp; Membership</h3>
               <p>Get oriented with the portal, understand your membership, and learn the core areas you'll use every day.</p>
             </div>
-            <aside class="walkthrough-sign" aria-label="Membership walkthrough tip">
+            <aside id="membership-walkthrough" class="walkthrough-sign" aria-label="Membership walkthrough tip">
               <span class="walkthrough-sign-arrow" aria-hidden="true">↓</span>
               <div class="walkthrough-sign-body">
                 <strong>Membership walkthrough is here</strong>
@@ -160,15 +205,43 @@
               <h3>PaperMoney &amp; Placing a Trade</h3>
               <p>Practice with PaperMoney and walk through how to place a trade step by step — no real money at risk.</p>
             </div>
+            <aside class="walkthrough-sign" aria-label="Placing a trade tip">
+              <span class="walkthrough-sign-arrow" aria-hidden="true">↓</span>
+              <div class="walkthrough-sign-body">
+                <strong>Placing a trade is here</strong>
+                <span>Starts at <time datetime="PT1M9S">1:09</time> in this video</span>
+              </div>
+              <button type="button" class="btn btn-sign" data-jump-video="papermoney-video" data-jump-to="69">
+                Jump to 1:09
+              </button>
+            </aside>
             <div class="video-wrapper">
-              <video class="tutorial-video" controls preload="metadata" playsinline poster="assets/posters/papermoney-and-placing-trade.jpg">
+              <video id="papermoney-video" class="tutorial-video" controls preload="metadata" playsinline poster="assets/posters/papermoney-and-placing-trade.jpg">
                 <source src="videos/papermoney-and-placing-trade.mp4" type="video/mp4" />
+                <track
+                  kind="chapters"
+                  src="videos/papermoney-and-placing-trade-chapters.vtt"
+                  srclang="en"
+                  label="Chapters"
+                  default
+                />
                 Your browser does not support the video tag.
               </video>
             </div>
+            <div id="placing-trade" class="chapter-bar" data-chapter-for="papermoney-video" aria-hidden="true">
+              <div class="chapter-bar-track">
+                <div class="chapter-segment segment-foundation" style="flex: 69"></div>
+                <div class="chapter-segment segment-membership" style="flex: 42">
+                  <span class="chapter-marker" title="Placing a trade starts here">
+                    <span class="chapter-marker-dot"></span>
+                    <span class="chapter-marker-label">Placing a trade is here · 1:09</span>
+                  </span>
+                </div>
+              </div>
+            </div>
             <ul class="topic-list">
-              <li>Setting up PaperMoney</li>
-              <li>Placing a practice trade</li>
+              <li>Setting up PaperMoney <span class="topic-time">0:00</span></li>
+              <li>Placing a practice trade <span class="topic-time">1:09</span></li>
               <li>Tips before going live</li>
             </ul>
           </article>

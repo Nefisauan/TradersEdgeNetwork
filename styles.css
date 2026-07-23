@@ -458,6 +458,139 @@ a:hover {
   font-weight: 700;
 }
 
+.topic-time {
+  margin-left: 0.35rem;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+/* Side navigation */
+.side-nav {
+  position: fixed;
+  top: 5.75rem;
+  left: 1rem;
+  z-index: 90;
+  width: 210px;
+  padding: 1rem 0.9rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.side-nav-title {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 0.75rem;
+  padding: 0 0.35rem;
+}
+
+.side-nav-list {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  counter-reset: side-nav;
+}
+
+.side-nav-list li {
+  counter-increment: side-nav;
+}
+
+.side-nav-link {
+  display: block;
+  padding: 0.65rem 0.7rem;
+  border-radius: 10px;
+  color: var(--charcoal);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.side-nav-link span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-top: 0.15rem;
+}
+
+.side-nav-link::before {
+  content: counter(side-nav) '. ';
+  color: var(--green-dark);
+}
+
+.side-nav-link:hover,
+.side-nav-link.is-active {
+  background: #f3f8ec;
+  border-color: var(--green-light);
+  color: var(--black);
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding-left: 230px;
+  }
+
+  .site-header {
+    padding-left: 230px;
+  }
+
+  .header-inner,
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  .side-nav {
+    position: sticky;
+    top: 4.4rem;
+    left: auto;
+    width: auto;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    padding: 0.75rem 4vw;
+    z-index: 95;
+  }
+
+  .side-nav-title {
+    display: none;
+  }
+
+  .side-nav-list {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .side-nav-list li {
+    flex: 0 0 auto;
+  }
+
+  .side-nav-link {
+    white-space: nowrap;
+    font-size: 0.78rem;
+    padding: 0.55rem 0.8rem;
+  }
+
+  .side-nav-link span {
+    display: inline;
+    margin-top: 0;
+    margin-left: 0.2rem;
+  }
+}
+
 /* Membership walkthrough sign + chapter division */
 .walkthrough-sign {
   display: flex;
