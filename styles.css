@@ -400,12 +400,28 @@ a:hover {
   padding: 1rem 0.85rem;
   text-align: center;
   box-shadow: var(--shadow);
-  min-height: 132px;
+  min-height: 148px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 0.4rem;
+  gap: 0.35rem;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-badge {
+  display: inline-block;
+  align-self: center;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  background: #eef6e5;
+  border: 1px solid var(--green-light);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+  margin-bottom: 0.15rem;
 }
 
 .timeline-card h3 {
@@ -441,8 +457,45 @@ a:hover {
 }
 
 .timeline-step.is-accent .timeline-card {
-  border-color: var(--black);
-  background: var(--black);
+  border-color: #1f3d16;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(140, 179, 105, 0.35), transparent 40%),
+    linear-gradient(160deg, #111 0%, #1d2a16 55%, #0f0f0f 100%);
+  box-shadow: 0 12px 28px rgba(26, 26, 26, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-step.is-accent .timeline-card::before,
+.timeline-step.is-accent .timeline-card::after {
+  position: absolute;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: rgba(140, 179, 105, 0.22);
+  pointer-events: none;
+}
+
+.timeline-step.is-accent .timeline-card::before {
+  content: '$';
+  top: 0.35rem;
+  left: 0.55rem;
+  font-size: 1.5rem;
+}
+
+.timeline-step.is-accent .timeline-card::after {
+  content: '$$$';
+  right: 0.45rem;
+  bottom: 0.25rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.timeline-step.is-income .timeline-node {
+  background: linear-gradient(145deg, var(--green) 0%, #5f8f3d 100%);
+  color: var(--white);
+  font-size: 1.05rem;
+  box-shadow: 0 0 0 3px rgba(140, 179, 105, 0.35), 0 8px 18px rgba(95, 143, 61, 0.35);
+  animation: income-pulse 1.8s ease-in-out infinite;
 }
 
 .timeline-step.is-accent .timeline-card h3 {
@@ -450,7 +503,24 @@ a:hover {
 }
 
 .timeline-step.is-accent .timeline-card p {
-  color: #c9c9c5;
+  color: #d5dbc9;
+}
+
+.timeline-step.is-accent .timeline-badge,
+.badge-income {
+  color: #14300c;
+  background: var(--green);
+  border-color: transparent;
+}
+
+@keyframes income-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
 }
 
 @keyframes timeline-rise {
