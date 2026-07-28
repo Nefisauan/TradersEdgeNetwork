@@ -306,13 +306,13 @@ a:hover {
 
 /* Journey timeline */
 .journey {
-  padding: 0.5rem 0 3rem;
+  padding: 0.25rem 0 2.25rem;
 }
 
 .journey-header {
   text-align: center;
   max-width: 640px;
-  margin: 0 auto 2.25rem;
+  margin: 0 auto 1.5rem;
 }
 
 .journey-header h2 {
@@ -585,7 +585,7 @@ a:hover {
 /* Hero */
 .hero {
   position: relative;
-  padding: 4.5rem 0 5rem;
+  padding: 1.75rem 0 1.5rem;
   overflow: hidden;
 }
 
@@ -603,40 +603,44 @@ a:hover {
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 720px;
+  max-width: 640px;
 }
 
 .hero-emblem {
-  width: 88px;
-  height: 88px;
-  margin: 0 auto 1.5rem;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 0.75rem;
   opacity: 0.9;
 }
 
 .eyebrow {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--green-dark);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
 }
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-size: clamp(1.55rem, 3.5vw, 2rem);
   font-weight: 800;
   color: var(--black);
   line-height: 1.15;
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
 }
 
 .hero-lead {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   color: var(--gray-600);
-  margin-bottom: 2rem;
-  line-height: 1.7;
+  margin-bottom: 1rem;
+  line-height: 1.55;
+}
+
+.journey {
+  padding: 0.25rem 0 2.25rem;
 }
 
 /* Tutorials */
@@ -1140,6 +1144,6 @@ a:hover {
   }
 
   .hero {
-    padding: 3rem 0 3.5rem;
+    padding: 1.25rem 0 1.1rem;
   }
 }
