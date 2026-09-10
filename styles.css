@@ -1053,6 +1053,68 @@ a:hover {
   }
 }
 
+/* Help / contact */
+.help {
+  padding: 0 0 2.5rem;
+}
+
+.help-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 1.75rem;
+  background: linear-gradient(135deg, #f7faf2 0%, var(--white) 55%);
+  border: 2px solid var(--green);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.help-copy {
+  flex: 1 1 280px;
+  max-width: 620px;
+}
+
+.help-copy h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 0.45rem;
+}
+
+.help-copy p {
+  color: var(--gray-600);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.help-number {
+  margin-top: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.btn-text-me {
+  background: var(--green);
+  color: var(--white);
+  border-color: var(--green);
+  padding: 0.9rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(140, 179, 105, 0.28);
+}
+
+.btn-text-me:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  color: var(--white);
+}
+
 /* CTA */
 .cta {
   padding: 0 0 5rem;
