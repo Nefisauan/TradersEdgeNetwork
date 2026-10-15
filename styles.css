@@ -290,6 +290,19 @@ a:hover {
   animation: none;
 }
 
+.book-access {
+  padding: 0 0 1.5rem;
+}
+
+.book-access .book-access-sign {
+  margin-bottom: 0;
+}
+
+.walkthrough-card {
+  max-width: 860px;
+  margin: 2.5rem auto 0;
+}
+
 .trial-cta {
   display: flex;
   flex-direction: column;
