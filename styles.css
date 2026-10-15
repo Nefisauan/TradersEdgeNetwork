@@ -704,7 +704,12 @@ a:hover {
 }
 
 .accelerator {
-  padding-top: 0;
+  padding: 1rem 0 3rem;
+}
+
+.accelerator-contact {
+  max-width: 860px;
+  margin: 2.5rem auto 0;
 }
 
 .section-header .eyebrow {
@@ -1068,7 +1073,8 @@ a:hover {
   max-width: 620px;
 }
 
-.help-copy h2 {
+.help-copy h2,
+.help-copy h3 {
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 3vw, 1.6rem);
   font-weight: 800;
