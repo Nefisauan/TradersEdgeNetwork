@@ -3,7 +3,7 @@
  * Videos are also re-encoded louder; this adds a little extra headroom in-browser.
  */
 (function () {
-  const PLAYBACK_GAIN = 1.35;
+  const PLAYBACK_GAIN = 1.15;
 
   document.querySelectorAll('.tutorial-video').forEach((video) => {
     video.volume = 1;
@@ -28,50 +28,6 @@
     };
 
     video.addEventListener('play', boostOnPlay, { once: true });
-  });
-
-  function jumpToVideo(videoId, seconds) {
-    const video = document.getElementById(videoId);
-    const jumpTo = Number(seconds);
-
-    if (!video || Number.isNaN(jumpTo)) {
-      return;
-    }
-
-    const startAt = () => {
-      video.currentTime = jumpTo;
-      video.play().catch(() => {});
-    };
-
-    if (video.readyState >= 1) {
-      startAt();
-    } else {
-      video.addEventListener('loadedmetadata', startAt, { once: true });
-      video.load();
-    }
-
-    video.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-
-  document.querySelectorAll('[data-jump-video]').forEach((element) => {
-    element.addEventListener('click', (event) => {
-      const videoId = element.getAttribute('data-jump-video');
-      const jumpTo = element.getAttribute('data-jump-to');
-
-      if (!videoId) {
-        return;
-      }
-
-      // Side-nav anchors still scroll, then jump into the matching chapter.
-      if (element.tagName === 'A') {
-        // Allow hash navigation, then jump after scroll.
-        window.setTimeout(() => jumpToVideo(videoId, jumpTo), 50);
-        return;
-      }
-
-      event.preventDefault();
-      jumpToVideo(videoId, jumpTo);
-    });
   });
 
   const navLinks = Array.from(document.querySelectorAll('.side-nav-link[data-nav-section]'));

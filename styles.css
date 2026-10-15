@@ -676,9 +676,43 @@ a:hover {
   max-width: 100%;
 }
 
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.card-duration {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-600);
+}
+
+.card-duration::before {
+  content: '▶ ';
+  color: var(--green);
+  font-size: 0.7rem;
+}
+
+.card-cta {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.accelerator {
+  padding-top: 0;
+}
+
+.section-header .eyebrow {
+  margin-bottom: 0.4rem;
+}
+
 .card-badge {
   display: inline-block;
-  margin: 1.5rem 1.5rem 0;
   padding: 0.3rem 0.85rem;
   background: var(--green-light);
   color: var(--green-dark);
@@ -719,36 +753,6 @@ a:hover {
   display: block;
   object-fit: contain;
   background: #000;
-}
-
-.topic-list {
-  list-style: none;
-  padding: 1.25rem 1.5rem 1.75rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.topic-list li {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--gray-600);
-  background: var(--gray-100);
-  padding: 0.4rem 0.9rem;
-  border-radius: 100px;
-  border: 1px solid var(--gray-200);
-}
-
-.topic-list li::before {
-  content: '✓ ';
-  color: var(--green);
-  font-weight: 700;
-}
-
-.topic-time {
-  margin-left: 0.35rem;
-  color: var(--green-dark);
-  font-weight: 700;
 }
 
 /* Side navigation */
@@ -948,87 +952,6 @@ a:hover {
   color: var(--white);
 }
 
-.chapter-bar {
-  padding: 0.85rem 1.5rem 2.75rem;
-}
-
-.chapter-bar-track {
-  display: flex;
-  height: 10px;
-  border-radius: 999px;
-  overflow: visible;
-  background: var(--gray-200);
-  position: relative;
-}
-
-.chapter-segment {
-  position: relative;
-  height: 100%;
-}
-
-.segment-foundation {
-  background: #cfd5c8;
-  border-radius: 999px 0 0 999px;
-}
-
-.segment-membership {
-  background: var(--green);
-  border-radius: 0 999px 999px 0;
-}
-
-.chapter-marker {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 2;
-}
-
-.chapter-marker-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--black);
-  border: 3px solid var(--green);
-  box-shadow: 0 0 0 3px rgba(140, 179, 105, 0.25);
-}
-
-.chapter-marker-label {
-  position: absolute;
-  top: calc(100% + 0.55rem);
-  left: 50%;
-  transform: translateX(-30%);
-  white-space: normal;
-  max-width: 180px;
-  text-align: center;
-  line-height: 1.25;
-  font-family: var(--font-heading);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--green-dark);
-  background: #eef6e5;
-  border: 1px solid var(--green-light);
-  padding: 0.35rem 0.65rem;
-  border-radius: 999px;
-}
-
-.chapter-marker-label::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 12%;
-  width: 8px;
-  height: 8px;
-  background: #eef6e5;
-  border-left: 1px solid var(--green-light);
-  border-top: 1px solid var(--green-light);
-  transform: rotate(45deg);
-}
-
 @keyframes sign-bounce {
   0%,
   100% {
@@ -1040,14 +963,6 @@ a:hover {
 }
 
 @media (max-width: 640px) {
-  .chapter-marker-label {
-    transform: translateX(-40%);
-    white-space: normal;
-    max-width: 160px;
-    text-align: center;
-    line-height: 1.25;
-  }
-
   .walkthrough-sign {
     margin: 0 1rem 1rem;
   }
